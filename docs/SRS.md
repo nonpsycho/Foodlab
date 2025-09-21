@@ -187,7 +187,7 @@ FoodLab предлагает открытый API, простой интерфе
 ![Registration](moqups/registration.png)
 
 ### 4.2 Аутентификация
-![Login_in](moqups/login_in.png)
+![Log_in](moqups/log_in.png)
 
 ### 4.3 Главный экран админа
 ![Main_screen_admin](moqups/main_screen_admin.png)
