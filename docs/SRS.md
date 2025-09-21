@@ -195,7 +195,7 @@ FoodLab предлагает открытый API, простой интерфе
 ### 4.4 Главный экран пользователя
 ![Main_screen_user](moqups/main_screen_user.png)
 
-### 4.5 Главный экран пользователя
+### 4.5 Главный экран гостя
 ![Main_screen_guest](moqups/main_screen_guest.png)
 
 ### 4.6 Поиск
