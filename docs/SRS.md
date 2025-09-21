@@ -13,7 +13,7 @@
 3. [Системные требования](#system_requirements)  
    3.1 [Функциональные требования](#functional_requirements)  
    3.2 [Нефункциональные требования](#non-functional_requirements)  
-4. [Архитектура системы](#system_architecture)  
+4. [Эскизы интерфейса](#interface_sketches)  
 5. [Технологический стек](#tech_stack)  
 6. [Безопасность и производительность](#security_performance)  
 7. [Тестирование](#testing)  
@@ -183,6 +183,38 @@ FoodLab предлагает открытый API, простой интерфе
 
 ## 4. 🏗️ Эскизы интерфейса
 
+### 4.1 Регистрация
+![Registration](moqups/registration.png)
+
+### 4.2 Аутентификация
+![Login_in](moqups/login_in.png)
+
+### 4.3 Главный экран админа
+![Main_screen_admin](moqups/main_screen_admin.png)
+
+### 4.4 Главный экран пользователя
+![Main_screen_user](moqups/main_screen_user.png)
+
+### 4.5 Главный экран пользователя
+![Main_screen_guest](moqups/main_screen_guest.png)
+
+### 4.6 Поиск
+![Search](moqups/search.png)
+
+### 4.7 Комментарии
+![Comments](moqups/comments.png)
+
+### 4.8 Добавдение рецепта
+![Add_recipe](moqups/add_recipe.png)
+
+### 4.9 Редактирование рецепта
+![Editing_recipe](moqups/editing_recipe.png)
+
+### 4.10 Добавдение нового ингредиента
+![Add_new_ingredient](moqups/add_new_ingredient.png)
+
+### 4.11 Удаление рецепта
+![Delete_recipe](moqups/delete_recipe.png)
 
 ---
 
