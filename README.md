@@ -10,7 +10,7 @@
 [![REST API](https://img.shields.io/badge/API-RESTful-orange.svg)](https://restfulapi.net/)
 
 A modern recipe management platform built with Spring Boot and React that helps users discover, create, and share culinary recipes with detailed ingredient tracking and nutritional analysis.
-
+[Srs of program](/docs/requirements/SRS.md)
 </div>
 
 ## ✨ Features
