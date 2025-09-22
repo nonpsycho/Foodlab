@@ -201,16 +201,22 @@ FoodLab предлагает открытый API, простой интерфе
 ### 4.7 Комментарии
 ![Comments](moqups/comments.png)
 
-### 4.8 Добавдение рецепта
+### 4.8 Список ингредиентов 
+![List_ing](moqups/list_ing.png)
+
+### 4.9 Добавдение рецепта
 ![Add_recipe](moqups/add_recipe.png)
 
-### 4.9 Редактирование рецепта
+### 4.10 Добавдение рецепта
+![Add_ingredients](moqups/add_ingredients.png)
+
+### 4.11 Редактирование рецепта
 ![Editing_recipe](moqups/editing_recipe.png)
 
-### 4.10 Добавдение нового ингредиента
+### 4.12 Добавдение нового ингредиента
 ![Add_new_ingredient](moqups/add_new_ingredient.png)
 
-### 4.11 Удаление рецепта
+### 4.13 Удаление рецепта
 ![Delete_recipe](moqups/delete_recipe.png)
 
 ---
