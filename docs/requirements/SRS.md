@@ -199,7 +199,7 @@ FoodLab предлагает открытый API, простой интерфе
 ![Comments](../moqups/comments.png)
 
 ### 4.8 Список ингредиентов 
-![List_ing](moqups/list_ing.png)
+![List_ing](../moqups/list_ing.png)
 
 ### 4.9 Добавление рецепта
 ![Add_recipe](../moqups/add_recipe.png)
