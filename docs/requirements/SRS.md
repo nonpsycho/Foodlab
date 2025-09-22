@@ -181,40 +181,40 @@ FoodLab предлагает открытый API, простой интерфе
 ![Registration](../moqups/registration.png)
 
 ### 4.2 Аутентификация
-![Log_in](moqups/log_in.png)
+![Log_in](../moqups/log_in.png)
 
 ### 4.3 Главный экран админа
-![Main_screen_admin](moqups/main_screen_admin.png)
+![Main_screen_admin](../moqups/main_screen_admin.png)
 
 ### 4.4 Главный экран пользователя
-![Main_screen_user](moqups/main_screen_user.png)
+![Main_screen_user](../moqups/main_screen_user.png)
 
 ### 4.5 Главный экран гостя
-![Main_screen_guest](moqups/main_screen_guest.png)
+![Main_screen_guest](../moqups/main_screen_guest.png)
 
 ### 4.6 Поиск
-![Search](moqups/search.png)
+![Search](../moqups/search.png)
 
 ### 4.7 Комментарии
-![Comments](moqups/comments.png)
+![Comments](../moqups/comments.png)
 
 ### 4.8 Список ингредиентов 
 ![List_ing](moqups/list_ing.png)
 
 ### 4.9 Добавление рецепта
-![Add_recipe](moqups/add_recipe.png)
+![Add_recipe](../moqups/add_recipe.png)
 
 ### 4.10 Добавление ингредиента
-![Add_ingredient](moqups/add_ingredient.png)
+![Add_ingredient](../moqups/add_ingredient.png)
 
 ### 4.11 Редактирование рецепта
-![Editing_recipe](moqups/editing_recipe.png)
+![Editing_recipe](../moqups/editing_recipe.png)
 
 ### 4.12 Добавление нового ингредиента
-![Add_new_ingredient](moqups/add_new_ingredient.png)
+![Add_new_ingredient](../moqups/add_new_ingredient.png)
 
 ### 4.13 Удаление рецепта
-![Delete_recipe](moqups/delete_recipe.png)
+![Delete_recipe](../moqups/delete_recipe.png)
 
 ---
 
