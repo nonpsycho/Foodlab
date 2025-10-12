@@ -1,97 +1,86 @@
 ```mermaid
 graph TB
-    subgraph "👤 Пользователь"
-        U[Пользователь]
+    subgraph User
+        U[User]
     end
 
-    %% ---------- Frontend ----------
-    subgraph "🌐 React Frontend"
-        U --> |HTTPS| RA[React App<br/>Material-UI]
-        RA --> |REST API| API[Backend API]
+    subgraph Frontend
+        U -->|HTTPS| RA[React_App_MUI]
+        RA -->|REST_API| GLB
     end
 
-    %% ---------- Backend Controllers ----------
-    subgraph "⚙️ Spring Boot Controllers"
-        API --> RC[Recipe<br/>Controller]
-        API --> IC[Ingredient<br/>Controller]
-        API --> UC[User<br/>Controller]
-        API --> CC[Comment<br/>Controller]
-        API --> VC[Visit<br/>Controller]
-        API --> LC[Log<br/>Controller]
+    GLB[Nginx_Load_Balancer]
+
+    subgraph SpringBoot_Backend
+        GLB -->|/api/*| SB[Tomcat]
+
+        %% Controllers
+        SB --> UC[UserController]
+        SB --> RC[RecipeController]
+        SB --> IC[IngredientController]
+        SB --> CC[CommentController]
+        SB --> LC[LogController]
+        SB --> ALC[AsyncLogController]
+        SB --> VC[VisitController]
+
+        SB --> GEH[GlobalExceptionHandler]
     end
 
-    %% ---------- Services ----------
-    subgraph "🔧 Сервисный слой"
-        RC --> RS[Recipe Service]
-        IC --> IS[Ingredient Service]
-        UC --> US[User Service]
-        CC --> CS[Comment Service]
-        VC --> VS[Visit Service]
-        LC --> LS[AsyncLog Service]
-        
+    subgraph Service_Layer
+        UC --> US[UserService]
+        RC --> RS[RecipeService]
+        IC --> IS[IngredientService]
+        CC --> CS[CommentService]
+        LC --> LS[LogService]
+        ALC --> ALS[AsyncLogService]
+        VC --> VS[VisitService]
+
+        %% Cache
         RS --> CACHE[InMemoryCache]
     end
 
-    %% ---------- Repositories ----------
-    subgraph "🗃️ Репозитории JPA"
-        RS --> RR[(Recipe<br/>Repository)]
-        IS --> IR[(Ingredient<br/>Repository)]
-        US --> UR[(User<br/>Repository)]
-        CS --> CR[(Comment<br/>Repository)]
-        
-        RS --> RIR[(RecipeIngredient<br/>Repository)]
+    subgraph Data_Access
+        US --> UR[UserRepository]
+        RS --> RR[RecipeRepository]
+        IS --> IR[IngredientRepository]
+        CS --> CR[CommentRepository]
+        RS --> RIR[RecipeIngredientRepository]
+        RS --> SUR[RecipeUserSavesRepository]
+        VS --> VR[VisitRepository]
+        LS --> LR[LogRepository]
     end
 
-    %% ---------- База данных ----------
-    subgraph "🗄️ PostgreSQL Database"
-        RR --> DB[(PostgreSQL<br/>)]
+    subgraph PostgreSQL
+        UR --> DB[(PostgreSQL)]
+        RR --> DB
         IR --> DB
-        UR --> DB
         CR --> DB
         RIR --> DB
+        SUR --> DB
+        VR --> DB
+        LR --> DB
     end
 
-    %% ---------- Бизнес-логика ----------
-    subgraph "🎯 Бизнес-логика"
-        RS --> VALID[Recipe Validator]
-        US --> AUTH[Auth Context]
-        CS --> CVALID[Comment Validator]
-        IS --> IVALID[Ingredient Validator]
+    subgraph External_Resources
+        ALS -.-> EXEC[Async_Task_Executor]
     end
 
-    %% ---------- Вспомогательные компоненты ----------
-    subgraph "📦 Вспомогательные системы"
-        VS --> LOGGING[Logging Aspect]
-        LS --> FILE[File System<br/>Log Files]
-        CACHE --> MEM[In-Memory<br/>Cache Storage]
+    subgraph Deployment
+        RA -.->|build| STAT[Static_Files_CDN]
+        SB -.->|container| DOCKER[Docker_Image]
+        DB -.->|volume| VOL[Persistent_Volume]
     end
 
-    %% ---------- Security ----------
-    subgraph "🔐 Аутентификация"
-        AUTH --> LOCAL[Local Storage]
-        US --> LOGIN[Login Service]
-    end
-
-    %% ---------- Deployment ----------
-    subgraph "🐳 Deployment"
-        RA -.-> |build| STAT[Static Files<br/>Nginx]
-        RC -.-> |container| DOCK[Docker<br/>Spring Boot]
-        DB -.-> |volume| VOL[(Persistent<br/>Volume)]
-    end
-
+    %% ---- Class styles ----
     classDef frontend fill:#61dafb,stroke:#282c34,color:#000
     classDef backend fill:#6db33f,stroke:#fff,color:#000
     classDef db fill:#336791,stroke:#fff,color:#fff
-    classDef business fill:#ff6b6b,stroke:#fff,color:#000
-    classDef support fill:#f9d71c,stroke:#000,color:#000
-    classDef security fill:#9b59b6,stroke:#fff,color:#fff
+    classDef external fill:#f9d71c,stroke:#000,color:#000
     classDef deployment fill:#239aef,stroke:#fff,color:#fff
 
     class RA frontend
-    class RC,IC,UC,CC,VC,LC,RS,IS,US,CS,VS,LS backend
-    class DB,RR,IR,UR,CR,RIR db
-    class VALID,AUTH,CVALID,IVALID business
-    class LOGGING,FILE,MEM support
-    class LOCAL,LOGIN security
-    class STAT,DOCK,VOL deployment
+    class SB,UC,RC,IC,CC,LC,ALC,VC,US,RS,IS,CS,LS,ALS,VS,CACHE,GEH backend
+    class DB,UR,RR,IR,CR,RIR,SUR,VR,LR,VOL db
+    class EXEC external
+    class STAT,DOCKER deployment
 ```
