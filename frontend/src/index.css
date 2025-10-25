@@ -1,0 +1,23 @@
+body {
+  background-color: #F5EBDD;
+  color: #1B1B1B;
+  font-family: 'Vollkorn';
+  margin: 0;
+  padding: 0;
+
+}
+
+a {
+  color: #004225;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #C89F9C;
+  text-decoration: underline;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
