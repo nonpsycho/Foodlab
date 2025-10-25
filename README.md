@@ -2,24 +2,35 @@
 
 # FoodLab 🍳
 
-[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen.svg)](https://spring.io/projects/spring-boot)
-[![React](https://img.shields.io/badge/React-18.x-blue.svg)](https://reactjs.org/)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15%2B-blue.svg)](https://www.postgresql.org/)
-[![Material-UI](https://img.shields.io/badge/Material--UI-5.x-007FFF.svg)](https://mui.com/)
-[![REST API](https://img.shields.io/badge/API-RESTful-orange.svg)](https://restfulapi.net/)
+A modern culinary platform that blends flavor, nutrition, and collaboration — powered by **Spring Boot** & **React**.
 
-A modern recipe management platform built with Spring Boot and React that helps users discover, create, and share culinary recipes with detailed ingredient tracking and nutritional analysis.
+[SRS документация](/docs/SRS.md)  
+[План тестирования](/test%20plan.md)  
+[Результаты тестирования](/test%20result.md)
 
-[Srs of program](/docs/requirements/SRS.md)
-</div>
+---
 
-## ✨ Features
+## ✨ Основные возможности
+- **Управление рецептами** — Полный CRUD: создание, редактирование, удаление, лайки  
+- **Ингредиенты и питание** — Подсчёт калорий, нутриентов, пересчёт состава блюд  
+- **Комментарии и взаимодействие** — Обсуждение рецептов, отзывы, лайки  
+- **Поиск и фильтры** — Умная фильтрация по ингредиентам, диетам и категориям  
+- **Аналитика и статистика** — Питательная ценность, калорийность и история активности  
+- **Права доступа** — Пользователи, модераторы и администраторы  
 
-- **📚 Recipe Management**: Full CRUD operations for recipes with rich metadata
-- **🥗 Ingredient System**: Comprehensive ingredient database with nutritional information
-- **👥 User Collaboration**: Save, share and comment on recipes
-- **📊 Nutritional Analytics**: Automatic calculation of calories and macronutrients
-- **🔍 Advanced Search**: Find recipes by ingredients, name, or dietary preferences
-- **💬 Social Features**: Comment system and recipe rating
-- **📱 Responsive Design**: Beautiful Material-UI interface for all devices
-- **⚡ Performance**: Intelligent caching and optimized database queries
+---
+
+## 🛠️ Технологический стек
+**Backend:** Spring Boot, PostgreSQL, JPA, Lombok  
+**Frontend:** React, Material-UI, Axios, React Router  
+
+---
+
+## 🚀 Быстрый старт
+```bash
+# Backend
+mvn spring-boot:run
+
+# Frontend
+npm install
+npm start
