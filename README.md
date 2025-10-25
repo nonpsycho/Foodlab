@@ -4,7 +4,7 @@
 
 A modern culinary platform that blends flavor, nutrition, and collaboration — powered by **Spring Boot** & **React**.
 
-[SRS документация](/docs/SRS.md)  
+[SRS документация](/docs/requirements/SRS.md)  
 [План тестирования](/test%20plan.md)  
 [Результаты тестирования](/test%20result.md)
 
